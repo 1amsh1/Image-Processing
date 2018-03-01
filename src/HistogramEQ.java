@@ -1,15 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package diva_assign1_histogram;
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
-*/
 
 import java.awt.Color;
 import java.awt.Graphics2D;
@@ -26,7 +15,7 @@ public class HistogramEQ {
     private static BufferedImage original, equalized;
  
      public static void main(String[] args) throws IOException {
-        File original_f = new File("/home/amrusha/DIVA/lena_gray2.jpg");
+        File original_f = new File("/home/lena_gray2.jpg");
         original = ImageIO.read(original_f);
         equalized = histogramEqualization(original);
         System.out.println("Equalized");
@@ -35,7 +24,7 @@ public class HistogramEQ {
     }
  
     private static void writeImage() throws IOException {
-        File file = new File("/home/amrusha/DIVA/HistogramEQ.jpg");
+        File file = new File("/home/DIVA/HistogramEQ.jpg");
         ImageIO.write(equalized, "jpg", file);
 }
 
