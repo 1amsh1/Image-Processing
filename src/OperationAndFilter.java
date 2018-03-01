@@ -228,7 +228,7 @@ public static BufferedImage highpassFilter(BufferedImage img) throws IOException
 }
 public static String readTif() throws FileNotFoundException, IOException
 {
-            FileInputStream in = new FileInputStream("/home/amrusha/DIVA/lena_gray_256.tif");
+            FileInputStream in = new FileInputStream("/home/lena_gray_256.tif");
             FileChannel channel = in.getChannel();
             ByteBuffer buffer = ByteBuffer.allocate((int)channel.size());
             channel.read(buffer);
@@ -254,31 +254,31 @@ public static void main(String[] args) {
             
             //ROTATION
             op_image = rotateImage(image);
-            writeImage(op_image,"/home/amrusha/DIVA/Rotated.bmp");
+            writeImage(op_image,"/home/Rotated.bmp");
             
             //NEGATIVE
             op_image = getNegativeImage(image);
-            ImageIO.write(op_image, "bmp", new File("/home/amrusha/DIVA/negative.bmp"));
+            ImageIO.write(op_image, "bmp", new File("/home/negative.bmp"));
             
             //ZOOMING
             op_image = zoomImage(image);
-            ImageIO.write(op_image, "bmp", new File("/home/amrusha/DIVA/zoom.bmp"));
+            ImageIO.write(op_image, "bmp", new File("/home/zoom.bmp"));
             
             //SHRINKNG
             op_image = shrinkImage(image);
-            ImageIO.write(op_image, "bmp", new File("/home/amrusha/DIVA/shrink.bmp"));
+            ImageIO.write(op_image, "bmp", new File("/home/shrink.bmp"));
             
             //TRANSLATE
             op_image = translateImage(image);
-            ImageIO.write(op_image, "bmp", new File("/home/amrusha/DIVA/translate.bmp"));
+            ImageIO.write(op_image, "bmp", new File("/home/translate.bmp"));
             
             //MEDIAN FILTER
             op_image = MedianFilter(image);
-            ImageIO.write(op_image, "bmp", new File("/home/amrusha/DIVA/medianFilter.bmp"));
+            ImageIO.write(op_image, "bmp", new File("/home/medianFilter.bmp"));
             
             //HIGHBOOST FILTER
             op_image = highboostFilter(image);
-            ImageIO.write(op_image, "bmp", new File("/home/amrusha/DIVA/highboostFilter.bmp"));
+            ImageIO.write(op_image, "bmp", new File("/home/highboostFilter.bmp"));
             
             //LOWPASS FILTER
             op_image = lowpassFilter(image);
@@ -286,7 +286,7 @@ public static void main(String[] args) {
             
             //HIGHPASS FILTER
             op_image = highpassFilter(image);
-            ImageIO.write(op_image, "bmp", new File("/home/amrusha/DIVA/highpassFilter.bmp"));
+            ImageIO.write(op_image, "bmp", new File("/home/highpassFilter.bmp"));
             
         } catch (IOException e) {
               e.printStackTrace();
