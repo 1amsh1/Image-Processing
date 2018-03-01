@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package histogrammatching;
 import java.awt.EventQueue;
 import java.awt.Graphics2D;
@@ -34,7 +29,7 @@ public class HistogramMatching {
           double [] sb = new double[LEVEL];
           try {
               //read and load the image
-              input = ImageIO.read(new File("/home/amrusha/DIVA/lena_gray.bmp"));
+              input = ImageIO.read(new File("/home/lena_gray.bmp"));
           } catch (IOException ex) {
               Logger.getLogger(HistogramMatching.class.getName()).log(Level.SEVERE, null, ex);
           }
@@ -178,7 +173,7 @@ public class HistogramMatching {
                      } 
                  }
          try {
-             ImageIO.write(im, "png", new File("/home/amrusha/DIVA/HistogramMatching.png"));
+             ImageIO.write(im, "png", new File("/home/DIVA/HistogramMatching.png"));
              //System.out.println("Matched");
          } catch (IOException ex) {
              Logger.getLogger(HistogramMatching.class.getName()).log(Level.SEVERE, null, ex);
