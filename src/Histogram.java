@@ -1,6 +1,5 @@
 package histogramplot;
 
-
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
@@ -37,7 +36,7 @@ public class Histogram {
 
     private BufferedImage getImage() {
         try {
-            BufferedImage image = ImageIO.read(new File("/home/amrusha/DIVA/lena_gray.bmp"));
+            BufferedImage image = ImageIO.read(new File("/home/DIVA/lena_gray.bmp"));
             return image;
         } catch (IOException e) {
             e.printStackTrace(System.err);
